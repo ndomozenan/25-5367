@@ -1,0 +1,97 @@
+<h1>Welcome to Space Exploration Fun Facts!</h1>
+<h2>Discover amazing things about our universe</h2>
+<h3>A.Introduction</h3>
+<p>Space is vast, mysterious, and full of surprises. Let's explore some fun facts about planets, astronauts, and missions beyond Earth!</p>
+<img src="website_media/solar_system.jpg" alt="Solar System" width="400" height="250">
+<h3>B.Fun Facts</h3>
+<ol>
+  <li>The Sun is 93 million miles away from Earth.</li>
+  <li>Neutron stars can spin 600 times per second.</li>
+  <li>There are more stars in the universe than grains of sand on Earth.</li>
+  <li>A day on Venus is longer than a year on Venus.</li>
+  <li>Jupiter has 79 known moons.</li>
+  <li>Astronauts grow taller in space.</li>
+  <li>Black holes can warp time.</li>
+  <li>Water ice exists on the Moon.</li>
+  <li>Mars has the tallest volcano in the solar system.</li>
+  <li>The first living thing in space was a dog named Laika.</li>
+</ol>
+<h3>C.Media</h3>
+<video controls width="500">
+  <source src="website_media/rocket_launch.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video controls width="500">
+  <source src="website_media/earth_orbit.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<img src="website_media/astronaut.jpg" alt="Astronaut in space" width="400" height="300">
+<img src="website_media/mars.jpg" alt="Mars surface" width="400" height="300">
+<h4>Media Labels</h4>
+<ol>
+  <li>Video 1 – Rocket Launch</li>
+  <li>Video 2 – Orbiting the Earth</li>
+  <li>Picture 1 – Astronaut Floating in Space</li>
+  <li>Picture 2 – Mars Surface</li>
+</ol>
+<h3>D.Planets with moons</h3>
+<ul>
+  <li>Earth
+    <ul>
+      <li>Moon</li>
+    </ul>
+  </li>
+  <li>Mars
+    <ul>
+      <li>Phobos</li>
+      <li>Deimos</li>
+    </ul>
+  </li>
+  <li>Jupiter
+    <ul>
+      <li>Io</li>
+      <li>Europa</li>
+      <li>Ganymede</li>
+      <li>Callisto</li>
+    </ul>
+  </li>
+</ul>
+<h3>E.Planets facts</h3>
+<table border="1">
+  <tr>
+    <th>Planet</th><th>Distance from Sun (million km)</th><th>Moons</th><th>Diameter (km)</th><th>Interesting Fact</th>
+  </tr>
+  <tr>
+    <td>Mercury</td><td>57.9</td><td>0</td><td>4879</td><td>Fastest orbit around the Sun</td>
+  </tr>
+  <tr>
+    <td>Venus</td><td>108.2</td><td>0</td><td>12104</td><td>Hottest planet</td>
+  </tr>
+  <tr>
+    <td>Earth</td><td>149.6</td><td>1</td><td>12742</td><td>Only planet with life</td>
+  </tr>
+  <tr>
+    <td>Mars</td><td>227.9</td><td>2</td><td>6779</td><td>Red planet</td>
+  </tr>
+  <tr>
+    <td>Jupiter</td><td>778.5</td><td>79</td><td>139820</td><td>Biggest planet</td>
+  </tr>
+</table>
+<h3>F.Quotation</h3>
+<blockquote>
+"Space exploration is a humbling experience. It shows us how small we are in the universe, 
+yet also how capable humans are of discovering wonders beyond imagination. 
+Every mission opens our eyes to the infinite possibilities of the cosmos. 
+It challenges us to innovate, work together, and reach for goals that once seemed impossible. 
+The universe teaches us patience, curiosity, and the value of looking beyond our own world."
+<br><br>
+— Carl Sagan, 1980
+</blockquote>
+<footer>
+  <p>© 2026 Space Fun Facts</p>
+  <p>Created by Zenani Ndomo | Introduction to Web Design</p>
+</footer>
+
+</footer>
+
+</body>
