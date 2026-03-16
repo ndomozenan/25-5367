@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About The Enchanted Page</title>
+  <style>
+    /* ===== ABOUT PAGE - WARM, INVITING, EASY ON EYES ===== */
+    body {
+      background: linear-gradient(135deg, #2e3052, #3a3d68, #31365f);
+      color: #f0eefa;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Container - easy viewing size */
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 15px 25px 40px;
+    }
+
+    /* ===== HEADER ===== */
+    h1 {
+      font-size: 3.2em;
+      text-align: center;
+      color: #f0e6ff;
+      margin: 15px 0 5px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #e1d5ff;
+      border-left: 5px solid #b7abdf;
+      padding-left: 18px;
+      margin: 45px 0 25px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      color: #e1d5ff;
+      margin: 25px 0 15px;
+      font-weight: 500;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      background: rgba(50, 53, 80, 0.8);
+      border: 1px solid #8b80c2;
+      border-radius: 40px;
+      padding: 12px 20px;
+      margin: 20px 0 35px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #e6dcff;
+      text-decoration: none;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.95em;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #8b80c2;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== MAIN IMAGE - NO CROPPING ===== */
+    .feature-image {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 3px solid #8b80c2;
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+      margin: 30px 0 25px;
+      background: #2a2d4a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .feature-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-section {
+      margin: 45px 0 30px;
+    }
+
+    .video-card {
+      background: rgba(45, 48, 74, 0.7);
+      border-radius: 28px;
+      padding: 20px;
+      border: 2px solid #8b80c2;
+      box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-player {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid #a99bdf;
+      background: #1e2038;
+      aspect-ratio: 16/9;
+      margin-bottom: 15px;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-title {
+      font-size: 1.4em;
+      color: #f0e6ff;
+      margin: 10px 0 5px;
+      text-align: center;
+    }
+
+    .video-description {
+      color: #cbc1f0;
+      text-align: center;
+      font-size: 1em;
+      margin: 0;
+    }
+
+    /* ===== CONTENT CARDS ===== */
+    .story-card {
+      background: rgba(45, 48, 74, 0.6);
+      border: 1px solid #8b80c2;
+      border-radius: 28px;
+      padding: 28px;
+      margin: 25px 0;
+      box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.4);
+      font-size: 1.05em;
+      color: #f0eefa;
+      line-height: 1.6;
+    }
+
+    /* ===== UNORDERED LIST STYLING ===== */
+    .special-list {
+      background: rgba(55, 58, 90, 0.6);
+      border: 2px solid #a99bdf;
+      border-radius: 30px;
+      padding: 30px 30px 30px 50px;
+      margin: 30px 0;
+      box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    .special-list ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .special-list li {
+      color: #f0e6ff;
+      font-size: 1.15em;
+      margin: 18px 0;
+      padding-left: 35px;
+      position: relative;
+      border-bottom: 1px dashed #8b80c2;
+      padding-bottom: 12px;
+    }
+
+    .special-list li:last-child {
+      border-bottom: none;
+    }
+
+    .special-list li::before {
+      content: "✦";
+      color: #ffdfb0;
+      font-size: 1.3em;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+
+    /* Alternative list style - you can use either */
+    .special-list-alt {
+      background: rgba(55, 58, 90, 0.5);
+      border: 2px solid #8b80c2;
+      border-radius: 30px;
+      padding: 30px;
+      margin: 30px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .special-list-alt div {
+      background: rgba(70, 74, 110, 0.5);
+      border: 1px solid #a99bdf;
+      border-radius: 40px;
+      padding: 15px 20px;
+      text-align: center;
+      font-weight: 500;
+      color: #f0e6ff;
+      transition: all 0.2s;
+    }
+
+    .special-list-alt div:hover {
+      background: #8b80c2;
+      color: #1e2038;
+      transform: translateY(-3px);
+    }
+
+    /* ===== FEATURE GRID - SPECIAL FEATURES ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 35px 0;
+    }
+
+    .feature-box {
+      background: rgba(60, 64, 98, 0.7);
+      border: 1px solid #b7abdf;
+      border-radius: 24px;
+      padding: 25px 15px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .feature-box:hover {
+      background: rgba(139, 128, 194, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5em;
+      margin-bottom: 12px;
+    }
+
+    .feature-box h4 {
+      color: #f0e6ff;
+      font-size: 1.3em;
+      margin: 10px 0 8px;
+    }
+
+    .feature-box p {
+      color: #cbc1f0;
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    /* ===== MISSION BADGES ===== */
+    .mission-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+
+    .badge {
+      background: #4f4680;
+      border: 2px solid #cbc1f0;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #f0e6ff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .badge span {
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+
+    /* ===== QUOTE BLOCK ===== */
+    .about-quote {
+      background: rgba(70, 74, 110, 0.4);
+      border: 2px solid #b7abdf;
+      border-radius: 60px;
+      padding: 35px 45px;
+      margin: 45px 0;
+      text-align: center;
+    }
+
+    .about-quote p {
+      font-size: 1.4em;
+      line-height: 1.5;
+      color: #f0e6ff;
+      font-style: italic;
+      margin: 0;
+    }
+
+    .quote-source {
+      margin-top: 20px;
+      color: #cbc1f0;
+      font-size: 1em;
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-row {
+      display: flex;
+      justify-content: space-around;
+      background: rgba(45, 48, 74, 0.5);
+      border: 2px solid #8b80c2;
+      border-radius: 60px;
+      padding: 25px 15px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: 600;
+      color: #ffdfb0;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      color: #cbc1f0;
+      font-size: 1em;
+    }
+
+   <!-- ===== FOOTER - FIXED ===== -->
+  footer {
+    margin-top: 60px;
+    padding: 25px 0 15px;
+    border-top: 2px solid #8b80c2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cbc1f0;
+    width: 100%;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    font-size: 1.4em;
+    font-weight: 600;
+    background: linear-gradient(135deg, #e1d2ff, #b69eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5em;
+  }
+
+  .social span {
+    cursor: default;
+    color: #cbc1f0;
+    transition: all 0.2s;
+  }
+
+  .social span:hover {
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  .copyright {
+    text-align: center;
+    color: #a69dd0;
+    font-size: 0.9em;
+    padding-top: 15px;
+    border-top: 1px dashed #8b80c2;
+    width: 100%;
+  }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 800px) {
+      h1 { font-size: 2.5em; }
+      .features-grid, .special-list-alt { grid-template-columns: 1fr; }
+      .stats-row { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="fantasy.html">FANTASY</a>
+    <a href="reading.html">READING</a>
+    <a href="events.html">EVENTS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
+
+  <!-- Header -->
+  <h1>📖 ABOUT THE ENCHANTED PAGE 📖</h1>
+
+ 
+
+  <!-- Story Card 1 -->
+  <div class="story-card">
+    <p>The Enchanted Page Bookstore was created to encourage people to read and explore the power of stories. What began as a dream between friends who believed that books could change lives has grown into a gathering place for readers of all ages. Every corner of our store is designed to spark curiosity, from the carefully curated shelves to the cozy reading nooks where time seems to stand still.</p>
+  </div>
+
+  <!-- Video Section -->
+      </div>
+      <div class="video-title">🍃 The Magic of Quiet Moments</div>
+      <div class="video-description">Wander through our shelves and discover the peace of getting lost in a story.</div>
+    </div>
+  </div>
+
+  <!-- Story Card 2 -->
+  <div class="story-card">
+    <p>Our mission is to create a welcoming place where readers can discover books that inspire imagination and creativity. We believe that representation matters, which is why we actively seek voices from all backgrounds and traditions. Whether you're looking for a beloved classic or the voice of a debut author, you'll find stories that reflect the beautiful diversity of our world.</p>
+  </div>
+
+  <!-- UNORDERED LIST - What We Offer -->
+  <h2> WHAT MAKES US SPECIAL </h2>
+  
+  <div class="special-list">
+    <ul>
+      <li><strong>Curated Collections:</strong> Every book is hand-selected by readers who love stories</li>
+      <li><strong>Cozy Reading Spaces:</strong> Plush chairs, warm lighting, and quiet corners throughout</li>
+      <li><strong>Community Events:</strong> Book clubs, author visits, and writing workshops weekly</li>
+      <li><strong>Personalized Recommendations:</strong> Staff who actually read and remember your tastes</li>
+      <li><strong>Rare & Independent Press:</strong> Small publishers and hard-to-find editions</li>
+      <li><strong>Free Wi-Fi & Tea Station:</strong> Stay as long as you like, we're happy to have you</li>
+    </ul>
+  </div>
+
+  <!-- Alternative List Style (Grid of features) -->
+  <h2>✦ READER FAVORITES ✦</h2>
+  <div class="special-list-alt">
+    <div>📚 Fantasy Collection</div>
+    <div>☕ Reading Lounge</div>
+    <div>🎪 Author Events</div>
+    <div>📝 Writing Workshops</div>
+    <div>🧸 Children's Corner</div>
+    <div>📖 Rare Book Room</div>
+  </div>
+
+  <!-- Special Features Grid -->
+  <h2>✦ OUR SPECIAL FEATURES ✦</h2>
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="feature-icon">📚</div>
+      <h4>Hand-Selected</h4>
+      <p>Every book on our shelves was chosen with care by book lovers</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">☕</div>
+      <h4>Complimentary Tea</h4>
+      <p>Enjoy a warm cup while you browse — on us</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">🕯️</div>
+      <h4>Evening Readings</h4>
+      <p>Cozy candlelit story hours on Friday nights</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">✍️</div>
+      <h4>First Chapter Fridays</h4>
+      <p>Discover new books through live readings</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">🎁</div>
+      <h4>Book Wrapping</h4>
+      <p>Blind date with a book — let us surprise you</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">🗺️</div>
+      <h4>Reading Challenges</h4>
+      <p>Yearly quests for adventurous readers</p>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-number">5000+</div>
+      <div class="stat-label">Books</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">15+</div>
+      <div class="stat-label">Genres</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">50+</div>
+      <div class="stat-label">Events/Year</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">∞</div>
+      <div class="stat-label">Stories</div>
+    </div>
+  </div>
+
+  <!-- Story Card 3 -->
+  <div class="story-card">
+    <p>We believe every book has the power to change the way someone thinks about the world. That is why we carefully choose the books we display in our store. More than just a business, we are a community of readers who believe in the transformative power of stories. Whether you're visiting for the first time or the hundredth, you'll find a warm welcome, a comfortable chair, and a book that speaks to your soul.</p>
+  </div>
+
+  <!-- Mission Badges -->
+  <div class="mission-badges">
+    <div class="badge"><span>📖</span> Independent Bookstore</div>
+    <div class="badge"><span>🤝</span> Community Owned</div>
+    <div class="badge"><span>🌱</span> Since 2026</div>
+  </div>
+
+  <!-- Quote Block -->
+  <div class="about-quote">
+    <p>"A bookstore is one of the only pieces of evidence we have that people are still thinking."</p>
+    <div class="quote-source">— Inspiration for every page we turn</div>
+  </div>
+
+  <!-- Back to top link -->
+  <div style="text-align: center; margin: 40px 0 20px;">
+    <a href="#" style="color: #cbc1f0; text-decoration: none; padding: 8px 22px; border: 2px solid #8b80c2; border-radius: 35px; display: inline-block;">⬆ Back to top</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo"> Enchanted page </div>
+    <div class="social">
+      <span>⌨</span>
+      <span>◉</span>
+      <span>◈</span>
+      <span>⊛</span>
+    </div>
+    <div class="copyright">
+      © 2026 Ndomo Zenani — CICT 017 | I.W.D.
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

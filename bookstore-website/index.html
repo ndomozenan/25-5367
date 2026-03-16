@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Enchanted Page Bookstore 2026</title>
+<style>
+  /* ===== MODERN 2026 STYLE - SCALED DOWN ===== */
+  body {
+    background: linear-gradient(135deg, #1a1b2f, #2a2f4f, #1e2746);
+    color: #eaeef2;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  /* Smaller container */
+  .container {
+    max-width: 1100px;  /* Reduced from 1300px */
+    margin: 0 auto;
+    padding: 15px 30px 40px;  /* Reduced padding */
+  }
+
+  /* ===== HEADER - Smaller ===== */
+  h1 {
+    font-size: 3.8em;  /* Reduced from 4.5em */
+    text-align: center;
+    background: linear-gradient(135deg, #c0b7f2, #a88beb, #7a6bc1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0 5px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 30px rgba(168, 139, 235, 0.3);
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 1.2em;  /* Reduced from 1.4em */
+    color: #b2b9f0;
+    margin-bottom: 30px;  /* Reduced */
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 15px #7a6bc180;
+  }
+
+  /* ===== NAVIGATION - Smaller ===== */
+  nav {
+    background: rgba(26, 27, 47, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #4a4f8a;
+    border-radius: 50px;  /* Slightly smaller */
+    padding: 12px 25px;  /* Reduced padding */
+    margin: 20px 0 35px;  /* Reduced margin */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;  /* Reduced gap */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  nav a {
+    color: #e0d9ff;
+    text-decoration: none;
+    padding: 8px 20px;  /* Reduced padding */
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1em;  /* Reduced from 1.1em */
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    margin: 40px 0;  /* Reduced from 70px */
+  }
+
+  /* ===== CONTENT CARDS - Smaller ===== */
+  .story-card {
+    background: rgba(22, 24, 44, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid #4f558c;
+    border-radius: 28px;  /* Slightly smaller */
+    padding: 30px;  /* Reduced from 40px */
+    margin: 25px 0;  /* Reduced margin */
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    font-size: 1.05em;  /* Slightly smaller */
+    color: #eef2ff;
+    line-height: 1.6;
+  }
+
+  /* ===== IMAGE GALLERY - FIXED: NO CROPPING ===== */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;  /* Reduced gap */
+    margin: 30px 0;
+  }
+
+  .image-frame {
+    border-radius: 24px;  /* Slightly smaller */
+    overflow: hidden;
+    border: 3px solid #4a4f8a;
+    box-shadow: 0 20px 30px -12px black;
+    transition: all 0.4s;
+    /* REMOVED aspect-ratio - images now show FULL natural size */
+    background: #1e1f36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: auto;  /* CHANGED: height auto = NO CROPPING */
+    object-fit: contain;  /* CHANGED: contain shows full image */
+    display: block;
+    transition: transform 0.6s;
+  }
+
+  .image-frame:hover {
+    border-color: #b2b9f0;
+    transform: scale(1.01);
+    box-shadow: 0 25px 40px -10px #a88beb;
+  }
+
+  .image-frame:hover img {
+    transform: scale(1.03);
+  }
+
+  /* ===== VIDEO WRAPPER ===== */
+  .video-cinema {
+    border-radius: 28px;  /* Smaller */
+    overflow: hidden;
+    border: 3px solid #6b5fb1;
+    box-shadow: 0 25px 45px -10px #00000080;
+    margin: 35px 0;  /* Reduced margin */
+    background: #0b0c1a;
+    aspect-ratio: 16/9;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-label {
+    text-align: center;
+    margin: 15px 0 25px;  /* Reduced margin */
+    color: #b2b9f0;
+    font-size: 1.1em;  /* Smaller */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  /* ===== FEATURE GRID - Smaller ===== */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;  /* Reduced gap */
+    margin: 35px 0;  /* Reduced margin */
+  }
+
+  .feature-item {
+    background: rgba(26, 29, 51, 0.8);
+    backdrop-filter: blur(6px);
+    border: 1px solid #5a5f9a;
+    border-radius: 24px;  /* Smaller */
+    padding: 20px 15px;  /* Reduced padding */
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 12px 25px -8px #00000080;
+  }
+
+  .feature-icon {
+    font-size: 2.5em;  /* Reduced from 3.2em */
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 12px #a88beb);
+  }
+
+  .feature-item h4 {
+    color: #dfd6ff;
+    font-size: 1.2em;  /* Reduced from 1.5em */
+    margin: 10px 0 5px;
+    font-weight: 500;
+  }
+
+  .feature-item p {
+    color: #b7c0f0;
+    font-size: 0.9em;  /* Smaller */
+    margin: 0;
+  }
+
+  /* ===== INFO PANEL - Smaller ===== */
+  .info-panel {
+    background: linear-gradient(145deg, #1d1f3a, #292e55);
+    border: 2px solid #6f64b0;
+    border-radius: 40px;  /* Smaller */
+    padding: 35px;  /* Reduced from 50px */
+    margin: 45px 0;  /* Reduced margin */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;  /* Reduced gap */
+    box-shadow: 0 25px 40px -15px #000000, 0 0 30px #7a6bc140;
+  }
+
+  .info-block {
+    background: #11132a80;
+    backdrop-filter: blur(4px);
+    border-radius: 28px;  /* Smaller */
+    padding: 20px 15px;  /* Reduced padding */
+    border: 1px solid #8b7fd0;
+    text-align: center;
+  }
+
+  .info-block h3 {
+    color: #e7dcff;
+    font-size: 1.5em;  /* Reduced from 1.9em */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-bottom: 2px dashed #a193e0;
+    padding-bottom: 10px;
+  }
+
+  .info-block p {
+    color: #ccd4ff;
+    font-size: 1.1em;  /* Reduced from 1.2em */
+    margin: 10px 0;
+    font-weight: 300;
+  }
+
+  .highlight {
+    color: #ffdfb0;
+    font-weight: 600;
+    font-size: 1.1em;  /* Reduced from 1.3em */
+  }
+
+  /* ===== TESTIMONIAL - Smaller ===== */
+  .testimonial {
+    background: linear-gradient(135deg, #24284a, #1a1d3b);
+    border: 2px solid #a190e0;
+    border-radius: 50px;  /* Smaller */
+    padding: 35px 50px;  /* Reduced padding */
+    margin: 45px 0;  /* Reduced margin */
+    text-align: center;
+    box-shadow: 0 25px 50px -15px #000, 0 0 40px #7a6bc180;
+  }
+
+  .testimonial p {
+    font-size: 1.5em;  /* Reduced from 1.8em */
+    line-height: 1.4;
+    color: #f0ebff;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #b2a5ff;
+  }
+
+  .testimonial-author {
+    font-size: 1.1em;  /* Reduced from 1.3em */
+    color: #bcacff;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  /* ===== NEWSLETTER - Smaller ===== */
+  .newsletter {
+    background: rgba(16, 18, 36, 0.9);
+    backdrop-filter: blur(12px);
+    border: 2px solid #9183d1;
+    border-radius: 80px 80px 30px 30px;  /* Smaller radius */
+    padding: 40px 35px;  /* Reduced padding */
+    text-align: center;
+    margin: 45px 0;  /* Reduced margin */
+    box-shadow: 0 25px 40px -15px #000;
+  }
+
+  .newsletter h3 {
+    color: #f0e4ff;
+    font-size: 2.2em;  /* Reduced from 2.8em */
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+
+  .newsletter p {
+    color: #cac3f0;
+    font-size: 1.1em;  /* Reduced from 1.3em */
+    margin-bottom: 25px;
+  }
+
+  .newsletter-flex {
+    display: flex;
+    max-width: 550px;  /* Reduced from 700px */
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .newsletter-flex input {
+    flex: 1;
+    padding: 15px 25px;  /* Reduced padding */
+    border: none;
+    border-radius: 50px;
+    background: #0c0e20;
+    border: 2px solid #6a5ea8;
+    color: white;
+    font-size: 1em;  /* Reduced from 1.2em */
+    outline: none;
+    transition: all 0.3s;
+  }
+
+  .newsletter-flex button {
+    background: linear-gradient(135deg, #7a6bc1, #b397f0);
+    border: none;
+    border-radius: 50px;
+    padding: 0 30px;  /* Reduced padding */
+    color: white;
+    font-size: 1.1em;  /* Reduced from 1.3em */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #d0bbff;
+    text-shadow: 0 2px 5px #00000050;
+  }
+
+  /* ===== FOOTER - Smaller ===== */
+  footer {
+    margin-top: 50px;  /* Reduced from 80px */
+    padding: 30px 0 15px;  /* Reduced padding */
+    border-top: 3px solid #6a5e9f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #b7b5e0;
+  }
+
+  .footer-logo {
+    font-size: 1.6em;  /* Reduced from 2em */
+    font-weight: 600;
+    background: linear-gradient(135deg, #e1d2ff, #b69eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .social {
+    display: flex;
+    gap: 18px;  /* Reduced gap */
+    font-size: 1.8em;  /* Reduced from 2.2em */
+    filter: drop-shadow(0 0 12px #8f7ed0);
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;  /* Reduced */
+    color: #9299cf;
+    font-size: 0.9em;  /* Smaller */
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    h1 { font-size: 2.5em; }
+    .grid-2, .feature-grid, .info-panel { grid-template-columns: 1fr; }
+    .newsletter { border-radius: 30px; }
+    .newsletter-flex { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <h1>THE ENCHANTED PAGE</h1>
+  <div class="tagline">Where Stories Breathe • est. 2003</div>
+
+  <!-- Navigation -->
+  <nav>
+<a href="index.html">HOME</a> 
+<a href="fantasy.html">FANTASY COLLECTION</a> 
+<a href="reading.html">READING CORNER</a> 
+<a href="events.html">EVENTS & COMMUNITY</a> 
+<a href="about.html">ABOUT THE BOOKSTORE</a>
+   
+  </nav>
+
+  <!-- Story 1 -->
+  <section>
+    <div class="story-card">
+      <p>Welcome to The Enchanted Page Bookstore, a magical place where stories come alive. Every book here is like a doorway to another world filled with adventure, mystery, and imagination. As you step through our doors, you'll find yourself surrounded by towering shelves lined with countless tales waiting to be discovered. The warm glow of reading lamps illuminates cozy corners where book lovers lose themselves in pages filled with wonder, and the gentle rustle of turning pages creates a soothing symphony that echoes throughout our literary sanctuary. Whether you're a seasoned reader or just beginning your journey into the world of books, our enchanted space welcomes you to explore, dream, and discover.</p>
+    </div>
+  </section>
+
+  <!-- Images - FIXED: NO CROPPING! -->
+  <div class="grid-2">
+    <div class="image-frame">
+      <img src="images/bookstore.jpg" alt="Bookstore interior">
+    </div>
+    <div class="image-frame">
+      <img src="images/books.jpg" alt="Book collection">
+    </div>
+  </div>
+
+  <!-- Story 2 -->
+  <section>
+    <div class="story-card">
+      <p>Books are more than paper and ink, more than mere words printed on a page. They are journeys that transport us across oceans and through time, friendships that comfort us in lonely moments, battles that test our courage alongside beloved characters, and dreams that inspire us to see the world differently. At The Enchanted Page, we carefully select books that inspire curiosity, creativity, and wonder in readers of all ages. Our curated collection spans generations and genres, ensuring that every visitor can find a story that speaks to their heart. We believe that within every cover lies a universe waiting to be explored, a lesson to be learned, or a memory to be cherished for years to come.</p>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <div class="video-cinema">
+    <video controls autoplay muted loop>
+      <source src="videos/reading.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-label">✦ The reading corner experience ✦</div>
+
+  <!-- Story 3 -->
+  <section>
+    <div class="story-card">
+      <p>Whether you enjoy dragons soaring through mystical skies, ancient magic waiting to be rediscovered in forgotten tombs, mysterious kingdoms hidden beyond misty mountains, or heroic quests that test the limits of bravery and friendship, you will find something interesting to read here. Our shelves are filled with tales of epic adventures and quiet moments alike, stories that will make your heart race with excitement or bring tears of joy to your eyes. Every book you pick up could be the start of your next great adventure, the beginning of a lifelong friendship with characters who feel as real as family, or the spark that ignites your own imagination to create something wonderful.</p>
+    </div>
+  </section>
+
+  <!-- Feature Grid -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="feature-icon">📖</div>
+      <h4>FANTASY ARCHIVE</h4>
+      <p>5,000+ worlds to explore</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">☕</div>
+      <h4>READING LOUNGES</h4>
+      <p>Plush corners & warm light</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">💭</div>
+      <h4>BOOK CIRCLES</h4>
+      <p>Weekly gatherings</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">✨</div>
+      <h4>CURATED SHELVES</h4>
+      <p>Staff secrets & surprises</p>
+    </div>
+  </div>
+
+  <!-- Info Panel -->
+  <div class="info-panel">
+    <div class="info-block">
+      <h3>HOURS</h3>
+      <p><span class="highlight">Mon-Thu</span> 10am — 9pm</p>
+      <p><span class="highlight">Fri-Sat</span> 10am — 11pm</p>
+      <p><span class="highlight">Sun</span> 12pm — 6pm</p>
+    </div>
+    <div class="info-block">
+      <h3>LOCATION</h3>
+      <p>001 Statehouse lane</p>
+      <p>Dreams district</p>
+      <p>📞 (254) 555 0993</p>
+    </div>
+    <div class="info-block">
+      <h3>NEXT EVENTS</h3>
+      <p>✦ Midnight release</p>
+      <p>✦ Author's tea</p>
+      <p>✦ Tarot & tales</p>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <div class="testimonial">
+    <p>“ This is not just a bookstore. It's a universe wrapped in walls. I found myself between these shelves. ”</p>
+    <div class="testimonial-author">— Zenani N., a regular since 2013</div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h3>✦ The Page Keeper ✦</h3>
+    <p>Subscribe for rare editions & secret events.</p>
+    <div class="newsletter-flex">
+      <input type="Email" placeholder="Your story begins here">
+      <button>Sign</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Enchanted page</div>
+    <div class="social">
+      <span>⌨</span>
+      <span>◉</span>
+      <span>◈</span>
+      <span>⊛</span>
+    </div>
+    <div class="copyright">
+      © 2026 The Enchanted Page — A Sanctuary for Stories
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
